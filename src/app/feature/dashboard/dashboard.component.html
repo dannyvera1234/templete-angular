@@ -1,0 +1,100 @@
+<div class='p-6 flex flex-col items-center'>
+  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-7xl'>
+
+    <!-- Latest Deal Card -->
+    <div class='bg-white p-6 rounded-xl shadow-md'>
+      <div class='flex justify-between items-center'>
+        <h3 class='text-gray-700 font-semibold'>Latest Deal</h3>
+        <span class='bg-sky-100 text-blue-600 px-2 py-1 text-xs rounded-full font-medium'>86.5%</span>
+      </div>
+      <p class='text-gray-500 text-sm mt-1'>Last 7 days</p>
+      <div class='mt-10 flex justify-between items-center '>
+        <div class='font-semibold'>$98,500</div>
+        <div class='text-gray-700 font-semibold'>$1,22,900</div>
+      </div>
+      <div class='mt-2 relative w-full h-1 bg-gray-200 rounded-full'>
+        <div class='absolute top-0 left-0 h-1 bg-blue-500 rounded-full' style='width: 82%;'></div>
+      </div>
+      <div class='mt-4 text-sm text-gray-500'>Coupons used: 18/22</div>
+      <div class='text-sm text-gray-500 mt-10'>
+        Recent Purchasers
+      </div>
+      <div class='mt-2 flex items-center -space-x-2'>
+        @for (img of [1,2,3,4]; track $index) {
+        <img class='w-8 h-8 rounded-full border border-white shadow-md'
+          src="https://materialm-angular-main.netlify.app/assets/images/profile/user-1.jpg">
+        }
+        <span
+          class='w-8 h-8 flex items-center justify-center bg-gray-200 text-gray-500 rounded-full text-sm font-semibold'>+8</span>
+      </div>
+    </div>
+
+    <div class='bg-white p-6 rounded-xl shadow-md w-full'>
+      <div class='flex justify-between items-center'>
+        <h3 class='text-gray-700 font-semibold'>Customers</h3>
+        <span class='bg-green-100 text-green-600 px-2 py-1 text-xs rounded-full font-medium'>+26.5%</span>
+      </div>
+      <p class='text-gray-500 text-sm'>Last 7 days</p>
+      <div class='text-2xl font-semibold mt-2'>6,380</div>
+      <canvas #paymentsChart class='mt-2'></canvas>
+      <div class='mt-4 text-sm text-gray-500'>
+        <div class='flex justify-between'>
+          <span class='text-blue-600'>Apr 07 - Apr 14</span>
+          <span>6,380</span>
+        </div>
+        <div class='flex justify-between mt-1 text-gray-400'>
+          <span>Last Week</span>
+          <span>4,298</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payments Card -->
+    <div class='bg-white p-6 rounded-xl shadow-md w-full'>
+      <div class='flex justify-between items-center'>
+        <h3 class='text-gray-700 font-semibold'>Payments</h3>
+        <span class='bg-red-100 text-red-600 px-2 py-1 text-xs rounded-full font-medium'>-3.8%</span>
+      </div>
+      <p class='text-gray-500 text-sm'>Last 7 days</p>
+      <div class='text-2xl font-semibold mt-2'>12,389</div>
+      <canvas #paymentsChart class='mt-2'></canvas>
+      <div class='mt-4 text-sm text-gray-500'>
+        <div class='flex justify-between'>
+          <span class='text-blue-600'>Paypal</span>
+          <span>52%</span>
+        </div>
+        <div class='flex justify-between mt-1 text-gray-400'>
+          <span>Credit Card</span>
+          <span>48%</span>
+        </div>
+      </div>
+    </div>
+    <!-- Products Chart -->
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="flex justify-between items-center">
+        <h3 class="text-gray-700 font-semibold">Products</h3>
+        <span class="font-semibold mt-2">432</span>
+      </div>
+      <div class="flex justify-between items-center mt-2">
+        <p class="text-gray-500 text-sm mt-1">Last 7 days</p>
+        <div class="bg-green-100 text-green-600 px-2 py-1 text-xs rounded-full font-medium">+26.5%</div>
+      </div>
+
+
+      <div class="relative w-full flex justify-center mt-4">
+        <svg class="w-34 h-34" viewBox="0 0 36 36">
+          <circle class="text-gray-200 stroke-current" stroke-width="3" cx="18" cy="18" r="15" fill="none"></circle>
+          <circle class="text-blue-500 stroke-current" stroke-width="3" cx="18" cy="18" r="15" fill="none"
+            stroke-dasharray="100" stroke-dashoffset="40"></circle>
+          <circle class="text-purple-500 stroke-current" stroke-width="3" cx="18" cy="18" r="15" fill="none"
+            stroke-dasharray="100" stroke-dashoffset="70"></circle>
+          <circle class="text-pink-500 stroke-current" stroke-width="3" cx="18" cy="18" r="15" fill="none"
+            stroke-dasharray="100" stroke-dashoffset="85"></circle>
+        </svg>
+      </div>
+
+      <p class="text-gray-500 text-sm text-center mt-2">Profit more than last month</p>
+    </div>
+
+  </div>
+</div>

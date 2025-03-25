@@ -1,0 +1,66 @@
+<!-- Overlay oscuro cuando el sidebar está abierto -->
+@if (showToggle && isMobile) {
+<div class="fixed inset-0 bg-black  opacity-50  z-30 transition-opacity" (click)="showToggle = false">
+</div>
+}
+
+<div class="fixed left-0 top-0 h-full bg-white flex flex-col font-sans transition-all duration-300 z-40 shadow-lg"
+  [ngClass]="{
+    'w-64': showToggle,
+    'w-18': !showToggle,
+    'translate-x-0': showToggle,
+    '-translate-x-full': !showToggle,
+    'md:translate-x-0': true
+  }">
+
+  <!-- Encabezado -->
+  <div class="px-4 py-5 border-b flex items-center">
+    <div class="flex items-center justify-center w-12 h-12 flex-shrink-0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrx-RYbYFdnT_PM5vQTBp7a65iVmRmPG1acA&s" alt="Logo"
+        class="h-10 w-10 object-contain">
+    </div>
+
+    @if (showToggle) {
+    <h1 class="text-xl font-bold text-gray-800 whitespace-nowrap ml-2">Logo</h1>
+    }
+  </div>
+
+  <!-- Menú con scroll estilizado -->
+  <div class="flex-1 overflow-y-auto px-4 py-4 custom-scrollbar">
+    @for (section of menuSections; track $index) {
+    <div class="mb-8">
+      @if (showToggle) {
+      <h2 class="text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-3 px-2">
+        {{section.title}}
+      </h2>
+      }
+      <ul class="space-y-1">
+        @for (item of section.items; track $index) {
+        <li>
+          <a class="flex items-center px-2 py-2 text-sm font-medium rounded transition-colors cursor-pointer"
+            [class.text-sky-600]="item.active" [class.bg-sky-50]="item.active" [class.text-gray-700]="!item.active"
+            [class.hover:bg-gray-100]="!item.active">
+
+            <i class="iconify text-xl flex-shrink-0 w-5 h-5" [attr.data-icon]="item.icon"></i>
+
+            @if (showToggle) {
+            <span class="ml-2">{{item.name}}</span>
+            }
+
+            @if (item.active && showToggle) {
+            <span class="ml-auto w-1 h-6 bg-sky-600 rounded-full"></span>
+            }
+
+            @if (item.badge && showToggle) {
+            <span class="ml-auto text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-800">
+              {{ item.badge }}
+            </span>
+            }
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+</div>
