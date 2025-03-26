@@ -1,0 +1,77 @@
+<div class="relative">
+  <button class="p-2 hover:bg-blue-100 rounded-lg cursor-pointer" (click)="toggleNotification()">
+    <i class="iconify text-xl" data-icon="solar:bell-line-duotone"></i>
+  </button>
+  <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1 rounded-full">5</span>
+</div>
+@if (isNotificationOpen()) {
+<div class="fixed inset-0 bg-black  opacity-10 z-40 transition-opacity">
+</div>
+<div #notificationContainer
+  class="absolute top-15 right-5 z-40 w-full max-w-xs  bg-white p-3 rounded-lg shadow-lg mx-auto ">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-semibold">Notificaciones</h2>
+    <span class="px-2 py-1 text-xs text-white bg-purple-800 rounded-full">5 new</span>
+  </div>
+  <div class="space-y-2">
+    <!-- Notification Item -->
+    <div class="flex items-start gap-3 py-2 hover:bg-blue-50 transition-all rounded cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full ">
+        📞
+      </div>
+      <div class="flex-1 text-wrap">
+        <p class="font-medium">Launch Admin</p>
+        <p class="text-sm text-gray-500">Just see my new admin!</p>
+      </div>
+      <span class="text-xs text-gray-400 whitespace-nowrap">8:30 AM</span>
+    </div>
+
+    <div class="flex items-start gap-3 py-2 hover:bg-blue-50 transition-all rounded  cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center bg-purple-100 text-purple-500 rounded-full">
+        📅
+      </div>
+      <div class="flex-1 text-wrap">
+        <p class="font-medium">Event today</p>
+        <p class="text-sm text-gray-500">Just a reminder that you have event</p>
+      </div>
+      <span class="text-xs text-gray-400 whitespace-nowrap">8:21 AM</span>
+    </div>
+
+    <div class="flex items-start gap-3 py-2 hover:bg-blue-50 transition-all rounded  cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center bg-yellow-100 text-yellow-500 rounded-full">
+        ⚙️
+      </div>
+      <div class="flex-1 text-wrap">
+        <p class="font-medium">Settings</p>
+        <p class="text-sm text-gray-500">You can customize this template</p>
+      </div>
+      <span class="text-xs text-gray-400 whitespace-nowrap">8:05 AM</span>
+    </div>
+
+    <div class="flex items-start gap-3 py-2 hover:bg-blue-50 transition-all rounded  cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full">
+        📞
+      </div>
+      <div class="flex-1 text-wrap">
+        <p class="font-medium">Launch Templates</p>
+        <p class="text-sm text-gray-500">Just see my new admin!</p>
+      </div>
+      <span class="text-xs text-gray-400 whitespace-nowrap">7:30 AM</span>
+    </div>
+
+    <div class="flex items-start gap-3 py-2 hover:bg-blue-50 transition-all rounded  cursor-pointer">
+      <div class="w-10 h-10 flex items-center justify-center bg-red-100 text-red-500 rounded-full">
+        🔔
+      </div>
+      <div class="flex-1 text-wrap">
+        <p class="font-medium">Event tomorrow</p>
+        <p class="text-sm text-gray-500">Just a reminder that you have event</p>
+      </div>
+      <span class="text-xs text-gray-400 whitespace-nowrap">7:03 AM</span>
+    </div>
+  </div>
+
+  <!-- Button -->
+  <button class="w-full mt-4 px-4 py-2 text-white bg-purple-800 rounded-full">See all Notifications</button>
+</div>
+}

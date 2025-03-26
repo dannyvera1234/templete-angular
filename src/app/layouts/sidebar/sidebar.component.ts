@@ -21,7 +21,7 @@ interface MenuSection {
   styles: [`
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 4px; /* Hace la barra más delgada */
+  width: 3px; /* Hace la barra más delgada */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {

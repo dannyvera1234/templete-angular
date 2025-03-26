@@ -1,9 +1,10 @@
 import { Component, ElementRef, EventEmitter, HostListener, Output, signal, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { NotificationComponent } from '../../components';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink,NotificationComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {

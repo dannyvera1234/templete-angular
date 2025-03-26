@@ -5,19 +5,28 @@
       'w-16': !isMobile() && !isOver(),
     }" class="text-white transition-all duration-300">
     <div class="flex flex-col h-full">
-      <app-sidebar [showToggle]="isOver()" [isMobile]="isMobile()" ></app-sidebar>
+      @defer () {
+      <app-sidebar [showToggle]="isOver()" [isMobile]="isMobile()"></app-sidebar>
+      }
     </div>
   </div>
 
   <!-- Contenido Principal -->
   <div class="flex-1 bg-slate-50">
-    <app-header (toggleMobileNav)="toggleSidebar()">
-    </app-header>
+    @defer () {
+    <app-header (toggleMobileNav)="toggleSidebar()"></app-header>
+    }
 
-    <div>
+    <div class="main-content">
       <main class="max-w-screen-lg mx-auto">
         <router-outlet></router-outlet>
       </main>
     </div>
+
+    @defer {
+    <app-config />
+    }
   </div>
+
+
 </div>
