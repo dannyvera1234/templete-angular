@@ -5,8 +5,6 @@ import { ConfigComponent } from './config';
 import { HeaderComponent } from './header';
 import { SidebarComponent } from './sidebar';
 
-
-
 @Component({
   selector: 'app-layouts',
   imports: [RouterOutlet, HeaderComponent, SidebarComponent, NgClass, ConfigComponent],

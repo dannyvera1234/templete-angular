@@ -65,30 +65,29 @@ export class SidebarComponent {
     {
       title: 'Dashboards',
       items: [
-        { name: 'Analytics', icon: 'mdi:chart-line', active: true },
-        { name: 'eCommerce', icon: 'mdi:shopping' },
-        { name: 'CRM', icon: 'mdi:account-group' }
+        { name: 'Analytics', icon: 'solar:hand-money-outline', active: true },
+        { name: 'eCommerce', icon: 'solar:cart-line-duotone' },
       ]
     },
     {
       title: 'Apps',
       isSubsection: true,
       items: [
-        { name: 'Chat', icon: 'mdi:chat' },
-        { name: 'Calendar', icon: 'mdi:calendar' },
-        { name: 'Email', icon: 'mdi:email' },
-        { name: 'Kanban', icon: 'mdi:view-column' },
-        { name: 'Contacts', icon: 'mdi:account-box' },
-        { name: 'Contacts List', icon: 'mdi:format-list-bulleted', badge: 'New' },
-        { name: 'Courses', icon: 'mdi:book' },
-        { name: 'Employee', icon: 'mdi:badge-account' },
-        { name: 'Notes', icon: 'mdi:note-text' },
-        { name: 'Tickets', icon: 'mdi:ticket' },
-        { name: 'Invoice', icon: 'mdi:file-document' },
-        { name: 'ToDo', icon: 'mdi:format-list-checks' }
+        { name: 'Chat', icon: 'solar:chat-round-line-outline' },
+        { name: 'Calendar', icon: 'solar:calendar-line-duotone' },
+        { name: 'Email', icon: 'solar:explicit-outline' },
+        { name: 'Contacts', icon: 'solar:call-chat-outline' },
+        { name: 'Contacts List', icon: 'solar:user-plus-outline', badge: 'New' },
+        { name: 'Notes', icon: 'solar:document-add-outline' },
+        { name: 'Tickets', icon: 'solar:ticket-line-duotone' },
+        { name: 'Invoice', icon: 'solar:file-text-line-duotone' },
+        { name: 'ToDo', icon: 'solar:settings-outline' }
       ]
     }
   ];
+
+
+
 
 }
 
