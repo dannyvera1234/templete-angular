@@ -17,7 +17,7 @@ export class ConfigComponent {
 
   public readonly isConfigOpen = signal(false);
 
-  // Abre el panel de configuración
+  // Abre el panel de configuración ddd
   openConfigPanel() {
     this.isConfigOpen.set(true);
   }
